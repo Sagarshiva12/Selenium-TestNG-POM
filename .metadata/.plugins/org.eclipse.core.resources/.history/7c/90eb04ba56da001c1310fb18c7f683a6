@@ -1,0 +1,24 @@
+package Seleniummisc;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+
+public class AjaxcontrolTest
+{
+WebDriver driver;
+	
+	@BeforeTest
+	
+	public void launchbrowser()
+	{
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\shiva\\Downloads\\Chrome Driver for selenium\\chromedriver.exe");
+	driver =new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.manage().deleteAllCookies();
+	driver.get("https://magnus.jalaacademy.com/");
+	}
+	
+	
+
+}

@@ -1,0 +1,30 @@
+package selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class seleniumselector2
+{
+	public static void main(String[]args) throws InterruptedException
+	{
+		
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\shiva\\Downloads\\Chrome Driver for selenium\\chromedriver.exe");
+	
+	WebDriver driver =new ChromeDriver();
+	
+	driver.manage().window().maximize();
+	   
+	driver.manage().deleteAllCookies();
+	
+	driver.get("https://magnus.jalaacademy.com/");
+	
+	driver.findElement(By.id("UserName")).sendKeys("training@jalaacademy.com");
+	
+	driver.findElement(By.cssSelector("#Password")).sendKeys("jobprogram");
+	
+	driver.findElement(By.className("_btn btn-primary btn-flat")).click(); //failed bcoz class name is not unique  ...
+	driver.close();
+	
+
+}}

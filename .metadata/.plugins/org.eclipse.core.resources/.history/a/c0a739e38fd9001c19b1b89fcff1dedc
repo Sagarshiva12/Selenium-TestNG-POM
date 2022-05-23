@@ -1,0 +1,17 @@
+package Textbox;
+
+import org.testng.annotations.BeforeTest;
+
+public class Textbox1 
+{
+	
+	@BeforeTest
+	
+	WebDriver driver;
+	
+	public void sagar()
+	{
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\shiva\\Downloads\\Chrome Driver for selenium\\chromedriver.exe");
+		
+	}
+}
